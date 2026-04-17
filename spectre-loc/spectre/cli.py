@@ -5,11 +5,11 @@ from rich.table import Table
 def main():
     show_welcome()
     
-    # Input target sekarang berupa IP atau Range
-    target = console.input("[bold red]SPECTRE[/bold red]@[bold white]target_ip/range[/bold white]: ")
+    # Input target sekarang berupa IP atau Range (Ubah SPECTRE jadi SPECTER)
+    target = console.input("[bold red]SPECTER[/bold red]@[bold white]target_ip/range[/bold white]: ")
     
-    # Fitur baru: Pilih Mode
-    mode = console.input("[bold red]SPECTRE[/bold red]@[bold white]stealth_mode(y/n)[/bold white]: ").lower()
+    # Fitur baru: Pilih Mode (Ubah SPECTRE jadi SPECTER)
+    mode = console.input("[bold red]SPECTER[/bold red]@[bold white]stealth_mode(y/n)[/bold white]: ").lower()
     is_stealth = True if mode == 'y' else False
 
     show_status(f"Scanning target {target} in {'GHOST' if is_stealth else 'NORMAL'} mode...")
