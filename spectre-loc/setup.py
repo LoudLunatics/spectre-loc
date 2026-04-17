@@ -1,17 +1,16 @@
 from setuptools import setup
 
 setup(
-    name='spectre-loc',
-    version='1.1.1', # Kita naikkan ke 1.0.4 agar Pacman tahu ada update
-    packages=['spectre'], # 🚨 CARA EKSPLISIT: Paksa Python membungkus folder 'spectre'
+    name='specter',          # Berubah jadi specter
+    version='1.2.2',         # Versi baru
+    packages=['specter'],    # Target folder baru
     install_requires=[
-        'shodan==1.31.0',
         'python-dotenv==1.0.1',
         'rich==13.7.1'
     ],
     entry_points={
         'console_scripts': [
-            'spectre-loc=spectre.cli:main',
+            'specter=specter.cli:main',  # Perintah panggilannya sekarang 'specter'
         ],
     },
 )
