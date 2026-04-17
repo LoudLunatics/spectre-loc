@@ -3,23 +3,23 @@ import os
 
 console = Console()
 
-# Perhatikan huruf 'r' di depan tanda kutip tiga untuk mencegah error escape character
+# ASCII Art diperbarui murni menjadi "SPECTER" (Tanpa LOC)
 BANNER = r"""[bold red]
-  _____ _____  ______ _____ _______ _____  ______      _      ____   _____ 
- / ____|  __ \|  ____/ ____|__   __|  __ \|  ____|    | |    / __ \ / ____|
-| (___ | |__) | |__ | |       | |  | |__) | |__ ______| |   | |  | | |     
- \___ \|  ___/|  __|| |       | |  |  _  /|  __|______| |   | |  | | |     
- ____) | |    | |___| |____   | |  | | \ \| |____     | |___| |__| | |____ 
-|_____/|_|    |______\_____|  |_|  |_|  \_\______|    |______\____/ \_____|
+  _____ _____  ______ _____ _______ ______ _____  
+ / ____|  __ \|  ____/ ____|__   __|  ____|  __ \ 
+| (___ | |__) | |__ | |       | |  | |__  | |__) |
+ \___ \|  ___/|  __|| |       | |  |  __| |  _  / 
+ ____) | |    | |___| |____   | |  | |____| | \ \ 
+|_____/|_|    |______\_____|  |_|  |______|_|  \_\
 [/bold red]
-[bold white]        >> GEOLOCATION SURVEILLANCE & RECON ENGINE <<[/bold white]
+[bold white]        >> NETWORK RECONNAISSANCE & INFILTRATION ENGINE <<[/bold white]
 """
 
 def show_welcome():
     # Membersihkan layar terminal sebelum mencetak banner
     os.system('clear' if os.name == 'posix' else 'cls')
     console.print(BANNER)
-    console.print("[dim]Version 1.1.1 | Authorized Red Team Access Only[/dim]")
+    console.print("[dim]Version 1.2.2 | Authorized Red Team Access Only[/dim]")
     console.print("[bold red]—[/bold red]" * 70)
 
 def show_status(msg):
