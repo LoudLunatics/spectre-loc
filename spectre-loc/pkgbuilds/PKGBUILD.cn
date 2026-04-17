@@ -1,6 +1,6 @@
 # 维护者: Red Team <redteam@localhost>
 pkgname=spectre-loc
-pkgver=1.0.0
+pkgver=1.0.1
 pkgrel=1
 pkgdesc="基于Shodan的地理定位监控与侦察引擎"
 arch=('any')
