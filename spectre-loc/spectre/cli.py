@@ -1,5 +1,5 @@
-from spectre.ui import console, show_welcome, show_status, show_success, show_error
-from spectre.engine import SpectreEngine
+from specter.ui import console, show_welcome, show_status, show_success, show_error
+from specter.engine import SpectreEngine
 from rich.table import Table
 
 def main():
