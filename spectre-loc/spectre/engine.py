@@ -1,7 +1,7 @@
 import shodan
 
 class SpectreEngine:
-    def init(self, api_key):
+    def __init__(self, api_key):
         self.api = shodan.Shodan(api_key)
 
     def search_radar(self, lat, lon, radius):
