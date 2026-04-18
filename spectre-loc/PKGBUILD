@@ -1,27 +1,30 @@
 # Maintainer: Red Team <redteam@localhost>
-pkgname=spectre-loc
-pkgver=1.1.1
+pkgname=specter
+pkgver=1.2.5
 pkgrel=1
-pkgdesc="Geolocation Surveillance & Recon Engine based on Shodan"
+pkgdesc="Ghost Network Recon Engine (Standalone Nmap Scanner)"
 arch=('any')
+url="https://github.com/LoudLunatics/specter"
 license=('MIT')
 depends=('python' 'python-dotenv' 'python-rich' 'nmap')
 
-# Using the latest Arch Linux standard (PEP 517)
+# Menggunakan standar Arch Linux terbaru (PEP 517)
 makedepends=('python-build' 'python-installer' 'python-wheel' 'python-setuptools')
-source=()
 
-# Skipping checksum process because this is a local build
-sha256sums=()
+# INI KUNCI UTAMANYA: Mengunduh langsung dari rilis GitHub v1.2.5
+source=("$pkgname-$pkgver.tar.gz::https://github.com/LoudLunatics/specter/archive/refs/tags/v$pkgver.tar.gz")
+
+# Kita lewati checksum dulu untuk memastikan instalasi jalan
+sha256sums=('SKIP')
 
 build() {
-  # Masuk satu level lebih dalam ke sub-folder spectre-loc
-  cd "$pkgname-$pkgver/$pkgname"
+  # Masuk ke folder unduhan GitHub
+  cd "$pkgname-$pkgver"
   python -m build --wheel --no-isolation
 }
 
 package() {
-  # Masuk satu level lebih dalam ke sub-folder spectre-loc
-  cd "$pkgname-$pkgver/$pkgname"
+  # Instalasi roda (wheel) Python ke sistem Arch
+  cd "$pkgname-$pkgver"
   python -m installer --destdir="$pkgdir" dist/*.whl
 }
